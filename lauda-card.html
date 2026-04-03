@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Lauda Immobiliare</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;500;600&display=swap');
+
+```
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(160deg, #0f6b5f 0%, #093d36 60%, #061e1b 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  font-family: 'Montserrat', Georgia, sans-serif;
+}
+
+/* LOGO */
+.header {
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.logo-brand {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: #c9a84c;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.logo-sub {
+  font-size: 8px;
+  font-weight: 500;
+  letter-spacing: 0.5em;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+}
+
+.logo-rule {
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #c9a84c, transparent);
+  margin-top: 6px;
+}
+
+/* GLASS CARD */
+.glass-card {
+  width: 90%;
+  max-width: 380px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 24px;
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  padding: 24px 18px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* BUTTONS */
+.actions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn {
+  text-decoration: none;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  font-family: 'Montserrat', Georgia, sans-serif;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  transition: all 0.25s ease;
+  width: 100%;
+  display: block;
+}
+
+.btn:hover {
+  background: rgba(201, 168, 76, 0.12);
+  border-color: rgba(201, 168, 76, 0.45);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(201, 168, 76, 0.1);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 20px;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  font-family: 'Montserrat', Georgia, sans-serif;
+}
+
+.footer span {
+  color: rgba(201, 168, 76, 0.45);
+  font-weight: 600;
+}
+```
+
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo-brand">Lauda</div>
+    <div class="logo-sub">Immobiliare</div>
+    <div class="logo-rule"></div>
+  </header>
+
+  <main class="glass-card">
+    <nav class="actions">
+      <a href="https://laudaimmobiliare.com" class="btn" target="_blank" rel="noopener">🌐 Sito Web</a>
+      <a href="tel:+393515491453" class="btn">📞 Contattami</a>
+      <a href="mailto:filippol2005@icloud.com" class="btn">📧 Email</a>
+      <a href="https://instagram.com/laudaimmobiliare" class="btn" target="_blank" rel="noopener">📸 Instagram</a>
+      <a href="https://maps.google.com/?q=Via+Etna+84,+Santa+Maria+di+Licodia,+Catania" class="btn" target="_blank" rel="noopener">📍 Vieni a trovarci!</a>
+    </nav>
+  </main>
+
+  <div class="footer">Powered by: <span>@peppvision</span></div>
+
+  <script>
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('mouseenter', () => {
+        btn.style.transform = "translateY(-2px) scale(1.02)";
+      });
+      btn.addEventListener('mouseleave', () => {
+        btn.style.transform = "scale(1)";
+      });
+    });
+  </script>
+
+</body>
+</html>
